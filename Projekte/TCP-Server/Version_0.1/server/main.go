@@ -1,21 +1,21 @@
 package main
 
 import (
-	"net"
-	"io"
 	"fmt"
+	"io"
+	"net"
 	"time"
 )
 
 func main() {
-	ln, err := net.Listen("tcp", ":9000")
+	newserver, err := net.Listen("tcp", ":9000")
 	if err != nil {
 		panic(err)
 	}
-	defer ln.Close()
+	defer newserver.Close()
 
 	for {
-		conn, err := ln.Accept()
+		conn, err := newserver.Accept()
 		if err != nil {
 			panic(err)
 		}
