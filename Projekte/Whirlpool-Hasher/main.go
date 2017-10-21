@@ -1,3 +1,20 @@
+/*
+*
+* simples CLI-Tool, welches einen Text per -s übergeben bekommt
+* und daraus einen entsprechenden Whirlpoolhash macht
+*
+* Offizielle Website Whirlpool-Hash: http://www.larc.usp.br/~pbarreto/WhirlpoolPage.html
+*
+* Bsp.: go run main.go -s test
+*
+********************
+* Version: 0.1
+* Coder: Rasputin
+* Language: Go
+* Date: 21.10.2017
+********************
+*/
+
 package main
 
 import (
