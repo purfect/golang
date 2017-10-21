@@ -23,7 +23,7 @@ func main(){
 	// Der fertige Hash
 	fmt.Printf("Hash: %x\n",  w.Sum(nil))
 	// check
-	fmt.Println("Check (funktioniert nur mit \"test\" als Argument")
+	fmt.Println("Check (funktioniert nur mit \"test\" als Argument)")
 	// Der Hash noch  einmal als String
 	hashstring := "b913d5bbb8e461c2c5961cbe0edcdadfd29f068225ceb37da6defcf89849368f8c6c2eb6a4c4ac75775d032a0ecfdfe8550573062b653fe92fc7b8fb3b7be8d6"
 	// um zu checken ob alles passt muss der Hash (Hex-Wert) in einen String umgewandelt werden
