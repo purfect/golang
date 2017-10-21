@@ -17,5 +17,6 @@ func main(){
 	w := whirlpool.New()
 	hash := []byte(*stringoption)
 	w.Write(hash)
-	fmt.Println(*stringoption, " Hash:",  w.Sum(nil))
+	fmt.Println("Argument: ", *stringoption)
+	fmt.Printf("Hash: %x\n",  w.Sum(nil))
 }
