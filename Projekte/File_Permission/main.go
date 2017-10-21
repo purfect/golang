@@ -1,13 +1,3 @@
-/*
-* Programm zeigt Permissions an
-* 
-* $ go run main.go /bin/watch
-* /bin/watch :  -rwxr-xr-x
-*
-* Coder: Rasputin
-* Date: 21.10.2017
-*
-*/
 package main
 
 import (
@@ -28,5 +18,7 @@ func main() {
 		os.Exit(1)
 	}
 	mode := info.Mode()
-	fmt.Println(file, ": ", mode, "\n")
+	filesize := info.Size()
+	fmt.Println(file, ": ", mode)
+	fmt.Println("Size: ", filesize/1024, "kb")
 }
