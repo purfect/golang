@@ -1,11 +1,12 @@
 # Systeminfo
-	$ go run main.go 
-	Arch:   amd64
-	OS:     linux
-	Kernel: 4.10.10-200.fc25.x86_64
-	CPUs:   8
-	RAM (Used): 18.982750%
-	Hostname:  localhost.localdomain
-	Uptime:  198 Minuten ( 3 h)
-	Host-ID:  38a895fa-4877-4f90-afc9-a48e51dfffde
-
+	--> go run main.go 
+	Arch: amd64
+	OS: linux
+	Platform: ubuntu 16.04
+	Kernel: 4.10.0-37-generic
+	CPUs: 4
+	RAM (Used): 63.307221%
+	Hostname: Work01
+	Uptime: 92 Minuten ( 1 h)
+	Host-ID: 466a3162-4195-4b80-982f-5e1653164bb6
+	VirtualizationRole: host
