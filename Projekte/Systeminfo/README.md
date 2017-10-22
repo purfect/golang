@@ -8,5 +8,5 @@
 	RAM (Used): 63.307221%
 	Hostname: Work01
 	Uptime: 92 Minuten ( 1 h)
-	Host-ID: 466a3162-4195-4b80-982f-5e1653164bb6
+	Host-ID: 466f3162-4195-4af0-982a-5e1653164bb6
 	VirtualizationRole: host
