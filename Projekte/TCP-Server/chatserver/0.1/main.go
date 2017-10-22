@@ -29,6 +29,7 @@ func main() {
 				fmt.Println("Fehler: ", err.Error())
 			}
 			conns <- conn
+			fmt.Println("Verbunden: ",conn.RemoteAddr(), " (Client-Nr.:", i+1,")")
 		}
 	}()
 	for {
@@ -55,8 +56,8 @@ func main() {
 			for conn := range aconns {
 				conn.Write([]byte(msg))
 			}
-		case dconn := <- dconns:
-			fmt.Printf("Client %v ist weg\n", aconns[dconn]+1)
+		case dconn := <-dconns:
+			fmt.Printf("Client %v hat die Verbindung getrennt\n", aconns[dconn]+1)
 			delete(aconns, dconn)
 		}
 	}
