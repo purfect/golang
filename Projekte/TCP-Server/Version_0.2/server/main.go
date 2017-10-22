@@ -13,7 +13,7 @@ func main ()  {
 	// wir lauschen auf allen interfaces auf Port 9000
 	ln, err := net.Listen("tcp", ":9000")
 	if err != nil {
-		fmt.Errorf("Der konnte nicht gestartet werden: %s", err)
+		fmt.Println("Der konnte nicht gestartet werden:", err)
 		os.Exit(1)
 	}
 	// akzeptieren der Verbindungen zum Port
@@ -27,7 +27,7 @@ func main ()  {
 		// warten auf ende der Übertragung mit newline (\n)
 		message, err := bufio.NewReader(conn).ReadString('\n')
 		if err != nil {
-			fmt.Errorf("Es trat ein Fehler bei der Verbindung auf:%s", err)
+			fmt.Println("Es trat ein Fehler bei der Verbindung auf:", err)
 		}
 		// Ausgabe der Übertragenen Nachricht
 		fmt.Println("nachricht erhalten:", string(message))
