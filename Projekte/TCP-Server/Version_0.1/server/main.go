@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"io"
-	"net"
 	"time"
+	"net"
 )
 
 func main() {
