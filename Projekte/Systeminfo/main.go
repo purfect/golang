@@ -20,5 +20,5 @@ func main() {
 	fmt.Println("Uptime:", host.Uptime/60, "Minuten (", (host.Uptime/60)/60, "h)")
 	fmt.Println("Host-ID:", host.HostID)
 	fmt.Println("VirtualizationRole:", host.VirtualizationRole)
-	
+
 }
