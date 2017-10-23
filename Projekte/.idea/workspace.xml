@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20e4f38a-5696-462a-9208-cc9ff50bf9d6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TCP-Server/chatserver/0.2/main.go" />
-    </list>
+    <list default="true" id="20e4f38a-5696-462a-9208-cc9ff50bf9d6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +49,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1080" />
     <option name="y" value="147" />
     <option name="width" value="811" />
@@ -145,7 +142,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1054" extended-state="7" />
+    <frame x="0" y="0" width="1920" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29099876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
