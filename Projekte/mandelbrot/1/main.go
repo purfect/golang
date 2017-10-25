@@ -23,6 +23,7 @@ import (
 	"log"
 	"os"
 	"sync"
+	"runtime"
 )
 
 const (
@@ -138,8 +139,9 @@ func createRowWorkers(width, height int, buffered bool) image.Image {
 	c := make(chan int, cap)
 
 	var w sync.WaitGroup
-	w.Add(8)
-	for i := 0; i < 8; i++ {
+	cpucount := runtime.NumCPU()
+	w.Add(cpucount)
+	for i := 0; i < cpucount; i++ {
 		go func() {
 			for i := range c {
 				for j := 0; j < height; j++ {
