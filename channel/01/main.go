@@ -35,7 +35,7 @@ func send(even, odd chan<- int, quit chan<- bool) {
 	// gerade Werte gehen in den even-channel
 	// ungerade Werte gehen in den odd-channel
 	for i := 0; i < count; i++ {
-		checkint := r1.Intn(1000)
+		checkint := r1.Intn(100)
 		if checkint%2 == 0 {
 			even <- checkint
 		} else {
@@ -44,7 +44,7 @@ func send(even, odd chan<- int, quit chan<- bool) {
 	}
 	quit <- true
 }
-//
+// empfangen und ausgeben der Daten
 func receive(even, odd <-chan int, quit <-chan bool) {
 	for {
 		select {
