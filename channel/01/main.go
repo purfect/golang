@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"time"
 )
+const count = 10
 
 func main() {
-
 	even := make(chan int)
 	odd := make(chan int)
 	quit := make(chan bool)
@@ -17,8 +17,7 @@ func main() {
 func send(even, odd chan<- int, quit chan<- bool) {
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
-	//count := 10
-	for i := 0; i < 10; i++ {
+	for i := 0; i < count; i++ {
 		checkint := r1.Intn(100)
 		if checkint%2 == 0 {
 			even <- checkint
@@ -32,9 +31,9 @@ func receive(even, odd <-chan int, quit <-chan bool) {
 	for {
 		select {
 		case v := <-even:
-			fmt.Println("even-chan: ",v)
+			fmt.Println("gerade: ",v)
 		case v := <-odd:
-			fmt.Println("odd-chan: ", v)
+			fmt.Println("ungerade: ", v)
 		case <-quit:
 			return
 		}
