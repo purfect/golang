@@ -30,12 +30,12 @@ func send(even, odd chan<- int, quit chan<- bool) {
 	// erzeugen der Zufallsnummern
 	s1 := rand.NewSource(time.Now().UnixNano())
 	r1 := rand.New(s1)
-	// Zufälliger Integer zwischen 0 - 100 wird bei jedem Aufruf in der Schleife erzeugt
+	// Zufälliger Integer zwischen 0 - 1000 wird bei jedem Aufruf in der Schleife erzeugt
 	// und geprüft ob dieser durch 2 teilbar ist
 	// gerade Werte gehen in den even-channel
 	// ungerade Werte gehen in den odd-channel
 	for i := 0; i < count; i++ {
-		checkint := r1.Intn(100)
+		checkint := r1.Intn(1000)
 		if checkint%2 == 0 {
 			even <- checkint
 		} else {
