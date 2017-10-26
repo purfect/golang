@@ -1,3 +1,11 @@
+/*
+* Hier wird eine bestimmte Anzahl an Zufalszahlen generiert
+* und diese werden geprüft ob sie durch 2 teilbar sind oder nicht
+* Anschliessend werden diese auf entsprechende Channels verteilt
+*
+* Coder: Rasputin
+* Date: 26.10.2017
+*/
 package main
 
 import (
