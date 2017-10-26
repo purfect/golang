@@ -53,6 +53,7 @@ func receive(even, odd <-chan int, quit <-chan bool) {
 		case v := <-odd:
 			fmt.Printf("ungerade:\t%d\n", v)
 		case <-quit:
+			fmt.Println("Ende")
 			return
 		}
 	}
