@@ -27,8 +27,6 @@ func send(even, odd chan<- int, quit chan<- bool) {
 		}
 	}
 	quit <- true
-	close(even)
-	close(odd)
 }
 func receive(even, odd <-chan int, quit <-chan bool) {
 	for {
