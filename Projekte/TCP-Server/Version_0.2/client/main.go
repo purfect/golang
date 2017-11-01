@@ -9,7 +9,7 @@ import (
 
 func main () {
 	// Die Verbindung zum Server
-	conn, err := net.Dial("tcp", "127.0.0.1:9000")
+	conn, err := net.Dial("tcp", "127.0.0.1:9999")
 	if err != nil {
 		fmt.Println("Es konnte keine Verbindung zum Server hergestellt werden:", err)
 	}

@@ -112,6 +112,7 @@ func main() {
 			fmt.Println("Error:", err.Error())
 			os.Exit(1)
 		}
+		fmt.Println("es wurde eine neue Verbindung hergestellt")
 		go handleConn(chatServer, conn)
 	}
 
