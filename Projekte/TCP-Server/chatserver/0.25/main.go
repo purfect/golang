@@ -6,6 +6,7 @@ import (
 	"os"
 	"bufio"
 	"io"
+	"time"
 )
 
 type User struct {
@@ -82,8 +83,7 @@ func handleConn(chatServer *ChatServer, conn net.Conn) {
 	// write to conn
 	for msg := range user.Output {
 		if msg.Username != user.Name {
-
-			_, err := io.WriteString(conn, msg.Username+": "+msg.Text+"\n")
+			_, err := io.WriteString(conn, "[" + time.Now().Format(time.RFC822) + "] " + msg.Username + ": " + msg.Text+"\n")
 			if err != nil {
 				break
 			}
@@ -112,7 +112,7 @@ func main() {
 			fmt.Println("Error:", err.Error())
 			os.Exit(1)
 		}
-		fmt.Println("es wurde eine neue Verbindung hergestellt")
+		fmt.Println("[" + time.Now().Format(time.RFC822) + "] es wurde eine neue Verbindung hergestellt")
 		go handleConn(chatServer, conn)
 	}
 
