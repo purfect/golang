@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"time"
 )
 
 const ADDRESS = ":9000"
@@ -29,7 +30,7 @@ func main() {
 				fmt.Println("Fehler: ", err.Error())
 			}
 			conns <- conn
-			fmt.Println("Verbunden: ",conn.RemoteAddr(), " (Client-Nr.:", i+1,")")
+			fmt.Println("[" + time.Now().Format(time.RFC822) + "] Verbunden: ",conn.RemoteAddr(), " (Client-Nr.:", i+1,")")
 		}
 	}()
 	for {
@@ -46,7 +47,7 @@ func main() {
 					if err != nil {
 						break
 					}
-					msgs <- fmt.Sprintf("Client %v: %v", i, m)
+					msgs <- fmt.Sprintf("[" + time.Now().Format(time.RFC822) + "] Client %v: %v", i, m)
 				}
 				// fertig mit lesen
 				dconns <- conn
@@ -57,7 +58,7 @@ func main() {
 				conn.Write([]byte(msg))
 			}
 		case dconn := <-dconns:
-			fmt.Printf("Client %v hat die Verbindung getrennt\n", aconns[dconn]+1)
+			fmt.Printf("[" + time.Now().Format(time.RFC822) + "] Client %v hat die Verbindung getrennt\n", aconns[dconn]+1)
 			delete(aconns, dconn)
 		}
 	}
