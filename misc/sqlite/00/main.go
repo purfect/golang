@@ -27,7 +27,7 @@ func main() {
 	statement, _ := database.Prepare("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY, username TEXT, alias TEXT, randomint INT)")
 	statement.Exec()
 	statement, _ = database.Prepare("INSERT INTO people (username, alias, randomint) VALUES (?, ?, ?)")
-	statement.Exec("rasputin", "=^_^=", r1.Intn(100) )
+	statement.Exec("User"+strconv.Itoa(r1.Intn(100)), "=^_^=", r1.Intn(100) )
 	rows, err := database.Query("SELECT id, username, alias, randomint FROM people")
 	if err != nil {
 		fmt.Println(err)
@@ -35,6 +35,6 @@ func main() {
 	}
    	for rows.Next() {
         rows.Scan(&id, &username, &alias, &randomint)
-        fmt.Println(strconv.Itoa(id) + ": " + username + " " + alias + " " + strconv.Itoa(randomint))
+        fmt.Println(strconv.Itoa(id) + ": " + username + " " + alias + " Alter:" + strconv.Itoa(randomint))
     }
 }
