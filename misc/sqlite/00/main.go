@@ -1,3 +1,13 @@
+/*
+* - sqlite-DB wird erstellt
+* - es wird pro Programmaufruf ein Datensatz erstellt und eingefügt
+* - Datensatz: id (inkrementell), Beutzername + Zufallszahl, Alias (feste Zeichenfolge), Zufallszahl
+* - Abfrage der DB-Einträge und Ausgabe nach Stdout
+*
+* Coder: Rasputin
+* Datum: 18.11.2017
+*
+ */
 package main
 
 import (
