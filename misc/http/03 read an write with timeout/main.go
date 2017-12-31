@@ -38,9 +38,4 @@ func handle(conn net.Conn) {
 		fmt.Fprintf(conn, "I heard you say: %s\n", ln)
 	}
 	defer conn.Close()
-
-	// now we get here
-	// the connection will time out
-	// that breaks us out of the scanner loop
-	fmt.Println("***CODE GOT HERE***")
 }
