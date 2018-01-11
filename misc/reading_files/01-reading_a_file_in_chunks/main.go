@@ -24,10 +24,8 @@ func main() {
 			if err != io.EOF {
 				fmt.Println(err)
 			}
-
 			break
 		}
-
 		fmt.Println("bytes read: ", bytesread)
 		fmt.Println("bytestream to string: ", string(buffer[:bytesread]))
 	}
