@@ -11,5 +11,5 @@ func main() {
 		panic(err)
 	}
 	defer conn.Close()
-	fmt.Fprintln(conn, "Client connected")
+	fmt.Fprintln(conn, "Client was here")
 }
