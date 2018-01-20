@@ -38,4 +38,5 @@ func handle(conn net.Conn) {
 		fmt.Fprintf(conn, "I heard you say: %s\n", ln)
 	}
 	defer conn.Close()
+	fmt.Println("Disconnect Client - Reason: Timeout")
 }
