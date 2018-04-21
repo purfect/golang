@@ -1,13 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
 )
 
 func main() {
-	resp, errr := http.Get("https://httpbin.org/get")
+	resp, err := http.Get("https://httpbin.org/get")
 	if err != nil {
 		log.Fatalln("Keine Antwort")
 	}
@@ -16,4 +17,5 @@ func main() {
 	if err != nil {
 		log.Fatalln("Inhalt konnte nicht gelesen werden")
 	}
+	fmt.Println(string(content))
 }
