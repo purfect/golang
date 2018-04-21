@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://httpbin.org/get")
+	resp, err := http.Get("https://httpbin.org/get?search=test")
 	if err != nil {
 		log.Fatalln("Keine Antwort")
 	}
